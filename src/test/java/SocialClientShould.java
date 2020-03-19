@@ -21,7 +21,7 @@ class SocialClientShould {
     }
 
     @Test
-    void name() {
+    void excecute_given_command() {
         String input = "Alice -> I love the weather today";
         given(commandRepo.getCommand(input)).willReturn(command);
         socialClient.execute(input);

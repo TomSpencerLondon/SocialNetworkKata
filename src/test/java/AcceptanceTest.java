@@ -13,15 +13,20 @@ class AcceptanceTest {
     Console console;
     private SocialClient socialClient;
 
+    Parser parser;
+    CommandFactory commandFactory;
+
     @BeforeEach
     void setUp() {
-        socialClient = new SocialClient(new CommandRepository());
+        parser = new Parser();
+        commandFactory = new CommandFactory();
+        socialClient = new SocialClient(new CommandRepository(parser, commandFactory));
     }
 
     @Test
     public void user_can_post_a_message() {
-          socialClient.execute("Alice -> I love the weather today"); // post
-          socialClient.execute("Alice"); // read/
+        socialClient.execute("Alice -> I love the weather today"); // post
+        socialClient.execute("Alice"); // read/
         verify(console).print("I love the weather today");
     }
 }
