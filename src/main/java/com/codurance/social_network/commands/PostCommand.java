@@ -15,7 +15,7 @@ public class PostCommand implements Command {
     }
 
     public void execute(){
-        User user = userRepository.getUserBy(username);
+        User user = userRepository.findOrCreateUserBy(username);
         user.storeMessage(message);
     }
 }

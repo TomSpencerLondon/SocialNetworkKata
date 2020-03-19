@@ -20,7 +20,7 @@ class PostCommandShould {
         String username = "Alice";
         String message = "I love the weather today";
         PostCommand postCommand = new PostCommand(username, message, userRepository);
-        given(userRepository.getUserBy(username)).willReturn(user);
+        given(userRepository.findOrCreateUserBy(username)).willReturn(user);
 
         postCommand.execute();
 
