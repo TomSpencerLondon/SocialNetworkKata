@@ -1,13 +1,21 @@
 package com.codurance.social_network.commands;
 
+import com.codurance.social_network.User;
 import com.codurance.social_network.UserRepository;
 
 public class PostCommand implements Command {
-    public PostCommand(String username, String message, UserRepository userRepository) {
+    private final String username;
+    private final String message;
+    private final UserRepository userRepository;
 
+    public PostCommand(String username, String message, UserRepository userRepository) {
+        this.username = username;
+        this.message = message;
+        this.userRepository = userRepository;
     }
 
     public void execute(){
-        throw new UnsupportedOperationException("NOOOOOO!!!");
+        User user = userRepository.getUserBy(username);
+        user.storeMessage(message);
     }
 }
