@@ -15,7 +15,7 @@ class AcceptanceTest {
 
     @BeforeEach
     void setUp() {
-        socialClient = new SocialClient();
+        socialClient = new SocialClient(new CommandRepository());
     }
 
     @Test

@@ -1,5 +1,12 @@
 public class SocialClient {
+    private CommandRepository commandRepo;
+
+    public SocialClient(CommandRepository commandRepo) {
+        this.commandRepo = commandRepo;
+    }
+
     public void execute(String input) {
-        throw new UnsupportedOperationException("implement me!");
+        Command command = commandRepo.getCommand(input);
+        command.execute();
     }
 }
