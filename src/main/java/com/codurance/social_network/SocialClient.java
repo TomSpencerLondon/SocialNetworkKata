@@ -1,3 +1,7 @@
+package com.codurance.social_network;
+
+import com.codurance.social_network.commands.Command;
+
 public class SocialClient {
     private CommandRepository commandRepo;
 

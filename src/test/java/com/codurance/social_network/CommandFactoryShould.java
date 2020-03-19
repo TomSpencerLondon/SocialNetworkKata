@@ -1,3 +1,7 @@
+package com.codurance.social_network;
+
+import com.codurance.social_network.commands.CommandFactory;
+import com.codurance.social_network.commands.PostCommand;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

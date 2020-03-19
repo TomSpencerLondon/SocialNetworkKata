@@ -1,3 +1,6 @@
+package com.codurance.social_network;
+
+import com.codurance.social_network.commands.Command;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -10,8 +13,10 @@ import static org.mockito.Mockito.verify;
 @ExtendWith(MockitoExtension.class)
 class SocialClientShould {
 
-    @Mock CommandRepository commandRepo;
-    @Mock Command command;
+    @Mock
+    CommandRepository commandRepo;
+    @Mock
+    Command command;
 
     private SocialClient socialClient;
 

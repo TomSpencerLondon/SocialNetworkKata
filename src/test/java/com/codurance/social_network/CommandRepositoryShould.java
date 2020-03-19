@@ -1,3 +1,8 @@
+package com.codurance.social_network;
+
+import com.codurance.social_network.commands.Command;
+import com.codurance.social_network.commands.CommandFactory;
+import com.codurance.social_network.commands.PostCommand;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

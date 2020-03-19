@@ -1,3 +1,8 @@
+package com.codurance.social_network;
+
+import com.codurance.social_network.commands.Command;
+import com.codurance.social_network.commands.CommandFactory;
+
 public class CommandRepository {
 
     private final Parser parser;

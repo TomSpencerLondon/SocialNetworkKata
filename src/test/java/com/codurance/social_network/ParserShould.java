@@ -1,3 +1,6 @@
+package com.codurance.social_network;
+
+import com.codurance.social_network.Parser;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
