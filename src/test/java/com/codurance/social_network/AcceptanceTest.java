@@ -13,16 +13,17 @@ import static org.mockito.Mockito.verify;
 class AcceptanceTest {
 
     @Mock
-    Console console;
+    private Console console;
     private SocialClient socialClient;
-
-    Parser parser;
-    CommandFactory commandFactory;
+    private Parser parser;
+    private CommandFactory commandFactory;
+    private UserRepository userRepository;
 
     @BeforeEach
     void setUp() {
         parser = new Parser();
-        commandFactory = new CommandFactory();
+        userRepository = new UserRepository();
+        commandFactory = new CommandFactory(userRepository);
         socialClient = new SocialClient(new CommandRepository(parser, commandFactory));
     }
 
